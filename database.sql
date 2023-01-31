@@ -10,3 +10,13 @@ CREATE TABLE funcionarios
     departamento varchar(45) not null,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE veiculos
+(
+	id int unsigned not null auto_increment,
+    funcionario_id int unsigned default null,
+    veiculo varchar(45) not null default '',
+    placa varchar(10) not null default '',
+    PRIMARY KEY (id),
+    CONSTRAINT fk_veiculos_funcionarios FOREIGN KEY (funcionario_id) REFERENCES funcionarios (id)
+);
