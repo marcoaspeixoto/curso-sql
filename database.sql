@@ -28,3 +28,6 @@ CREATE TABLE salarios
     fim double not null,
     PRIMARY KEY (faixa)
 );
+
+ALTER TABLE funcionarios CHANGE COLUMN nome nome_func varchar(45) not null;
+ALTER TABLE funcionarios CHANGE COLUMN nome_func nome varchar(45) not null;
