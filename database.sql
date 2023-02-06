@@ -20,3 +20,11 @@ CREATE TABLE veiculos
     PRIMARY KEY (id),
     CONSTRAINT fk_veiculos_funcionarios FOREIGN KEY (funcionario_id) REFERENCES funcionarios (id)
 );
+
+CREATE TABLE salarios
+(
+	faixa varchar(45) not null,
+    inicio double not null,
+    fim double not null,
+    PRIMARY KEY (faixa)
+);
