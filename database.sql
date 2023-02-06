@@ -31,3 +31,6 @@ CREATE TABLE salarios
 
 ALTER TABLE funcionarios CHANGE COLUMN nome nome_func varchar(45) not null;
 ALTER TABLE funcionarios CHANGE COLUMN nome_func nome varchar(45) not null;
+
+DROP TABLE salarios;
+
