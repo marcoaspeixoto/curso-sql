@@ -8,3 +8,16 @@ CREATE TABLE tipo
     tipo varchar(40) not null,
     PRIMARY KEY (codigo)
 );
+
+CREATE TABLE instrutor
+(
+	codigo int unsigned not null auto_increment,
+    instrutor varchar(45) not null,
+    telefone char(9) not null,
+    PRIMARY KEY (codigo)
+);
+
+CREATE TABLE curso
+(
+
+);
