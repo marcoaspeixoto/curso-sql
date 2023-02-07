@@ -31,3 +31,13 @@ CREATE TABLE cursos
 
 RENAME TABLE tipo TO tipos;
 RENAME TABLE instrutor TO instrutores;
+
+CREATE TABLE alunos
+(
+	codigo int unsigned not null auto_increment,
+    aluno varchar(45) not null,
+    endereco varchar(60) not null,
+    email varchar(40) not null,
+    PRIMARY KEY (codigo)
+)
+
