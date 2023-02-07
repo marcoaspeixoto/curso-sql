@@ -39,5 +39,23 @@ CREATE TABLE alunos
     endereco varchar(60) not null,
     email varchar(40) not null,
     PRIMARY KEY (codigo)
-)
+);
 
+CREATE TABLE pedidos
+(
+	codigo int unsigned not null auto_increment,
+    aluno_codigo int unsigned default null,
+    data date not null,
+    hora time not null,
+    PRIMARY KEY (codigo),
+    CONSTRAINT fk_pedidos_alunos FOREIGN KEY (aluno_codigo) REFERENCES alunos (codigo)
+);
+
+CREATE TABLE pedido_detalhe
+(
+	pedido_codigo int unsigned default null,
+    curso_codigo int unsigned default null,
+    valor double not null,
+    CONSTRAINT fk_pedido_detalhe_pedido FOREIGN KEY (pedido_codigo) REFERENCES pedidos (codigo),
+    CONSTRAINT fk_pedido_detalhe_curso FOREIGN KEY (curso_codigo) REFERENCES cursos (codigo)
+);
