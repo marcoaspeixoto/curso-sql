@@ -34,3 +34,5 @@ ALTER TABLE funcionarios CHANGE COLUMN nome_func nome varchar(45) not null;
 
 DROP TABLE salarios;
 
+CREATE INDEX departamentos ON funcionarios (departamento);
+CREATE INDEX nomes ON funcionarios (nome(6));
