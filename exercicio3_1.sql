@@ -59,3 +59,5 @@ CREATE TABLE pedido_detalhe
     CONSTRAINT fk_pedido_detalhe_pedido FOREIGN KEY (pedido_codigo) REFERENCES pedidos (codigo),
     CONSTRAINT fk_pedido_detalhe_curso FOREIGN KEY (curso_codigo) REFERENCES cursos (codigo)
 );
+
+ALTER TABLE instrutores MODIFY telefone varchar(9) null;
