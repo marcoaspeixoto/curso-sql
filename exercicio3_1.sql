@@ -67,3 +67,8 @@ CREATE INDEX fk_instrutor ON cursos (instrutor_codigo);
 ALTER TABLE pedidos MODIFY aluno_codigo int unsigned not null;
 ALTER TABLE pdedidos CHANGE data data_hora datetime not null;
 CREATE INDEX fk_aluno ON pedidos (aluno_codigo);
+ALTER TABLE pedido_detalhe MODIFY pedido_codigo int unsigned not null;
+ALTER TABLE pedido_detalhe MODIFY curso_codigo int unsigned not null;
+CREATE INDEX fk_pedido ON pedido_detalhe (pedido_codigo);
+CREATE INDEX fk_curso ON pedido_detalhe (curso_codigo);
+ALTER TABLE pedido_detalhe ADD PRIMARY KEY (pedido_codigo, curso_codigo);
